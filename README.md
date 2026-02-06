@@ -1,4 +1,4 @@
-# 🎭 Face Detection with MediaPipe
+#  Face Detection with MediaPipe
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-Face_Detection-orange)
@@ -6,14 +6,14 @@
 
 A simple, fast, and robust real-time face detection application using Google's **MediaPipe** framework and **OpenCV**. This tool detects faces from your webcam feed and displays the detection confidence score in real-time.
 
-## ✨ Features
+##  Features
 
 - **Real-time Detection**: Uses your webcam to detect faces instantly.
 - **High Accuracy**: Powered by MediaPipe's lightweight and accurate face detection model.
 - **Confidence Score**: Displays how confident the model is about each detected face (e.g., "98.5%").
 - **Lightweight**: Minimal dependencies, easy to run on most machines.
 
-## 🚀 Getting Started
+##  Getting Started
 
 Follow these steps to get the project up and running on your local machine.
 
@@ -48,7 +48,7 @@ Follow these steps to get the project up and running on your local machine.
     pip install -r requirements.txt
     ```
 
-## 🎮 Usage
+##  Usage
 
 Simply run the main script:
 
@@ -60,13 +60,13 @@ python main.py
 - Detected faces will have a **green bounding box** and a **confidence percentage**.
 - Press **`q`** on your keyboard to exit the application.
 
-## 🛠️ Built With
+##  Built With
 
 - [Python](https://www.python.org/)
 - [MediaPipe](https://developers.google.com/mediapipe)
 - [OpenCV](https://opencv.org/)
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
