@@ -47,11 +47,21 @@ def main():
                     x, y = int(bboxC.xmin * iw), int(bboxC.ymin * ih) - 10
                     
                     cv2.putText(image, f'{score:.2%}', (x, y), 
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
+                    
+                    # Draw custom blue rectangle (BGR)
+                    cv2.rectangle(image, (int(bboxC.xmin * iw), int(bboxC.ymin * ih)), 
+                                  (int((bboxC.xmin + bboxC.width) * iw), int((bboxC.ymin + bboxC.height) * ih)), 
+                                  (255, 0, 0), 2)
 
             # Flip the image horizontally for a selfie-view display.
-            cv2.imshow('MediaPipe Face Detection', cv2.flip(image, 1))
+            image = cv2.flip(image, 1)
+            
+            # Add instruction text
+            cv2.putText(image, "Press 'q' to exit", (10, 30), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2)
+            
+            cv2.imshow('MediaPipe Face Detection', image)
             
             if cv2.waitKey(5) & 0xFF == ord('q'):
                 break
